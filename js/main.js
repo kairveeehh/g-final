@@ -1,6 +1,11 @@
 const singlePlayerBtn = document.getElementById('singlePlayer');
 const multiPlayerBtn = document.getElementById('multiPlayer');
 const fruitlogo = document.getElementById('fruitlogo');
+<<<<<<< HEAD
+const body = document.getElementById('body');
+
+=======
+>>>>>>> 4fe79b349e35c38eb88b6a5875bcefbb5d15e0ef
 
 // GENERAL VARIABLES
 
@@ -46,7 +51,11 @@ function preload(){
     for(var i=0; i<3; i++){
         livesImgs2[i] = loadImage('images/xx'+ (i+1) + '.png');
     }
+<<<<<<< HEAD
+    bg = loadImage('images/BG.png');
+=======
     bg = loadImage('images/GameBg_2.png');
+>>>>>>> 4fe79b349e35c38eb88b6a5875bcefbb5d15e0ef
     foregroundImg = loadImage('images/home-mask.png');
     fruitLogo = loadImage('images/fruit.png');
     ninjaLogo = loadImage('images/ninja.png');
@@ -72,7 +81,11 @@ function draw(){
     /*image(this.foregroundImg, 0, 0, 800, 350);
     image(this.fruitLogo, 40, 20, 358, 195);
     image(this.ninjaLogo, 420, 50, 318, 165);
+<<<<<<< HEAD
+   */
+=======
     image(this.newGameImg, 310, 360, 200, 200);*/
+>>>>>>> 4fe79b349e35c38eb88b6a5875bcefbb5d15e0ef
     
     
     //cnv.mouseClicked(check);
@@ -99,7 +112,7 @@ function menuOff(){
     fruitlogo.style.display="none";
 }
 function check(){ // Check for game start
-    if( !isPlay && (mouseX > 300 && mouseX < 520 && mouseY > 350 && mouseY < 550)){
+    if( !isPlay && (mouseX > 640 && mouseX < 700 && mouseY > 500 && mouseY < 600)){
         start.play();
         isPlay = true;
     }
@@ -108,6 +121,7 @@ function check(){ // Check for game start
 function game(){
     clear();
     background(bg);
+    body.style.background="black";
     sword.swipe(mouseX, mouseY);
     sword.update();
     sword.draw();
@@ -188,11 +202,17 @@ function gameOver(){
     over.play();
     clear();
     background(bg);
+<<<<<<< HEAD
+    image(this.gameOverImg, 500, 200, 490, 85);
+    image(this.newGameImg, 650, 500, 200, 200);
+=======
     image(this.gameOverImg, 500, 360, 490, 85);
+>>>>>>> 4fe79b349e35c38eb88b6a5875bcefbb5d15e0ef
     lives = 0;
     // button = createButton("Reset");
     // button.position(450, 350);
     // button.mousePressed(resetSketch);
+    //cnv.mouseClicked(check);
     console.log("lost");
 }
 
